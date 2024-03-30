@@ -1,0 +1,20 @@
+<h1>料理レシピ検索</h1>
+
+<%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search %> <br>
+  <%= submit_tag '検索する'  %>
+<% end %>
+
+<% if @hit %>
+  <% @foods.each do |f| %>
+    ランキング：<%= f["rank"] %> <br>
+    タイトル：<%= f["recipeTitle"] %> <br>
+    かかる時間：<%= f["recipeIndication"] %> <br>
+    <%# 写真をクリックするとレシピの詳細が見れる %>
+    <%= link_to f["recipeUrl"] do %>
+      <%= image_tag f["foodImageUrl"], size: '300x200' %> <br>
+    <% end %>
+  <% end %>
+<% else %>
+  <h1>ヒットなし</h1>
+<% end %>

@@ -76,3 +76,5 @@ group :production do
 end
 
 gem 'pry-rails'
+gem 'dotenv-rails'
+gem 'httpclient'
