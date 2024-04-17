@@ -1,0 +1,55 @@
+.top-page-header {
+  width: 100%;
+  height: 68px;
+  padding: 1vh 1.5vw;
+  background-color: rgb(243, 159, 126);
+  box-sizing: border-box;
+}
+
+.inner{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  font-size: 42px;
+  
+}
+
+.head-left{
+  width: 50%;
+}
+
+.head-right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.search-form{
+  text-align: right;
+  width: 50%;
+  margin-left: 5px;
+}
+
+.log-btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.log-in-btn{
+  margin-right: 3px;
+  text-decoration: none;
+}
+
+.sign-up-btn{
+  text-decoration: none;
+}

@@ -1,0 +1,100 @@
+/***********************************************
+メイン
+***********************************************/
+.upper-menu{
+  display: flex;
+  align-items: center;
+}
+
+.main-contents{
+  display:flex;
+}
+
+.random-btn{
+  height: 70px;
+  width: 120px;
+  background-color: salmon;
+  margin: 20px;
+}
+
+/*************************************************
+レシピ３つセットの部分
+*************************************************/
+.weekly-recipes{
+  height: 180px;
+  width: 90%;
+  display: flex;
+  margin: 5px 25px;
+  background-color: rgb(252, 230, 221);
+  border: 1px solid lightslategrey;
+}
+
+.day-of-week{
+  /*font-family: 'Courier New', Courier, monospace;*/
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.recipe-images{
+  height: 100%;
+  width: 60%;
+  display: flex;
+}
+.main-menu-image{
+  height: 100%;
+  width: 180px;
+  background-color: darkred;
+  border-right: 1px solid lightslategrey;
+}
+
+.sub-images{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.sub-menu-image{
+  height: 50%;
+  width: 90px;
+}
+
+.soup-menu-image{
+  height: 50%;
+  width: 90px;
+  border-top: 1px solid lightslategrey;
+}
+
+/********************************************
+レシピのタイトルが表示される部分
+********************************************/
+.menu-titles{
+  height: 100%;
+  width: 100%;
+  /*background-color: rgb(252, 230, 221);*/
+  display: flex;
+  flex-direction: column;
+}
+
+.main-menu-title,
+.sub-menu-title,
+.soup-menu-title{
+  display: flex;
+  align-items: center;
+}
+
+.main-menu-title{
+  height: calc(100%/3);
+  border-bottom: 1px solid lightslategrey;
+}
+.sub-menu-title{
+  height: calc(100%/3);
+  border-bottom: 1px solid lightslategrey;
+}
+.soup-menu-title{
+  height: calc(100%/3);
+}

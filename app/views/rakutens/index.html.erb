@@ -1,10 +1,33 @@
+<%= render "shared/header" %>
+<div class="upper-menu">
 <h1>料理レシピ検索</h1>
+  <div class="random-btn">
+    ボタン
+  </div>
+</div>
 
-<%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
-  <%= text_field_tag :search %> <br>
-  <%= submit_tag '検索する'  %>
-<% end %>
-
+<%# 曜日ごとの献立を表示 %>
+<% days_of_week = ["月", "火", "水", "木", "金", "土", "日"] %>
+<% 7.times do |i| %>
+<div class='main-contents'>
+  <div class="weekly-recipes">
+    <h2 class="day-of-week"><%= days_of_week[i] %></h2>
+    <div class="recipe-images">
+        <%= image_tag("sample-main.jpg", class: "main-menu-image") %>
+      <div class="sub-images">
+          <%= image_tag("sample-sub.jpg", class: "sub-menu-image")%>
+        <%= image_tag("sample-soup.jpg", class: "soup-menu-image") %>
+      </div>
+    </div>
+    <div class="menu-titles">
+      <div class="main-menu-title">　メインの料理名</div>
+      <div class="sub-menu-title">　副菜の料理名</div>
+      <div class="soup-menu-title">　汁物の料理名</div>
+    </div>
+  </div>
+</div>
+  <% end %>
+  
 <% if @hit %>
   <% @foods.each do |f| %>
     ランキング：<%= f["rank"] %> <br>

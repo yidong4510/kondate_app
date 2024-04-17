@@ -1,0 +1,18 @@
+<header class='top-page-header'>
+  <div class='inner'>
+    <div class='head-left'>
+      <%= link_to "Kondate.com", root_path, class:"title" %>
+    </div>
+    <div class='head-right'>
+      <div class="search-form">
+        <%= form_tag({controller:"rakutens",action:"index"}, method: :get, class: "search-window") do %>
+        <%= text_field_tag :search %> <%= submit_tag '検索する'  %>
+        <% end %>
+      </div>
+      <div class="log-btn">
+        <%= link_to "ログイン", root_path, class:'log-in-btn' %>
+        <%= link_to "サインアップ", root_path, class:'sign-up-btn' %>
+      </div>
+    </div>
+  </div>
+</header>
