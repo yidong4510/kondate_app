@@ -20,14 +20,23 @@
       </div>
     </div>
     <div class="menu-titles">
-      <div class="main-menu-title">　メインの料理名</div>
-      <div class="sub-menu-title">　副菜の料理名</div>
-      <div class="soup-menu-title">　汁物の料理名</div>
+      <div class="main-menu-title">
+        <h3>メインの料理名</h3>
+        <%= image_tag("blue_arrow.png", class: "arrow") %>
+      </div>
+      <div class="sub-menu-title">
+        <h3>副菜の料理名</h3>
+        <%= image_tag("blue_arrow.png", class: "arrow") %>
+        </div>
+      <div class="soup-menu-title">
+        <h3>汁物の料理名</h3>
+        <%= image_tag("blue_arrow.png", class: "arrow") %>
+      </div>
     </div>
   </div>
 </div>
   <% end %>
-  
+
 <% if @hit %>
   <% @foods.each do |f| %>
     ランキング：<%= f["rank"] %> <br>

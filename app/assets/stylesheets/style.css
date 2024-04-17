@@ -75,7 +75,6 @@
 .menu-titles{
   height: 100%;
   width: 100%;
-  /*background-color: rgb(252, 230, 221);*/
   display: flex;
   flex-direction: column;
 }
@@ -90,11 +89,19 @@
 .main-menu-title{
   height: calc(100%/3);
   border-bottom: 1px solid lightslategrey;
+  display: flex;
 }
 .sub-menu-title{
   height: calc(100%/3);
   border-bottom: 1px solid lightslategrey;
+  display: flex;
 }
 .soup-menu-title{
   height: calc(100%/3);
+  display: flex;
+}
+
+.arrow{
+  height: 25px;
+  width: 25px;
 }
