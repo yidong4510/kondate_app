@@ -3,13 +3,33 @@
 <h1>料理レシピ検索</h1>
   <div class="random-btn">
     ボタン
+    <%= @recipe_name %>
   </div>
 </div>
-
+<% if @random_recipe %>
+  <h1><a href="<%= @random_recipe['recipeUrl'] %>"><%= @random_recipe['recipeTitle'] %></a></h1>
+  <img src="<%= @random_recipe['foodImageUrl'] %>" alt="<%= @random_recipe['recipeTitle'] %>" width="200px">
+<% else %>
+  <p>No recipes found</p>
+<% end %>
+<%= button_to 'Change Recipe', fetch_recipe_path, method: :get %>
+  <%# 検索範囲を絞るウィンドウ %>
+<div class="menu-window hidden">
+  <div class='cat-niku'>
+  　肉類
+    <ul class='categories'>
+      <li class='categoriy'>豚肉</li>
+      <li class='categoriy'>鶏肉</li>
+      <li class='categoriy'>牛肉</li>
+      <li class='categoriy'>その他</li>
+    </ul>
+  </div>
+</div>
 <%# 曜日ごとの献立を表示 %>
 <% days_of_week = ["月", "火", "水", "木", "金", "土", "日"] %>
 <% 7.times do |i| %>
 <div class='main-contents'>
+
   <div class="weekly-recipes">
     <h2 class="day-of-week"><%= days_of_week[i] %></h2>
     <div class="recipe-images">
@@ -37,6 +57,7 @@
 </div>
   <% end %>
 
+<%#= apiの部分 %>
 <% if @hit %>
   <% @foods.each do |f| %>
     ランキング：<%= f["rank"] %> <br>

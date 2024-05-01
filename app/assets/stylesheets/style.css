@@ -105,3 +105,59 @@
   height: 25px;
   width: 25px;
 }
+
+/******************************************************
+ウィンドウ
+******************************************************/
+.hidden{
+  display: none;
+}
+
+.menu-window{
+  width: 350px;
+  height: 450px;
+  position: fixed;
+  top: 70px;
+  right: 30px;
+}
+
+.menu-window::before, .menu-window::after{
+  content:"";
+  position: absolute;
+  z-index: -1;
+}
+
+.menu-window::before{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border: 1px solid lightslategrey;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+
+.menu-window::after{
+  top: 0%;
+  right: 0%;
+  height: 14px;
+  width: 14px;
+  background-color: rgba(0, 0, 0, 0.52);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+/**************************************************************
+ウィンドウのリスト
+**************************************************************/
+.categories{
+  display: flex;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li:before{
+  content: '>';
+  margin-left: 14px;
+}

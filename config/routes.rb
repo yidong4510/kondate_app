@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'rakutens#index'
-  get "rakutens", to: "rakutens#index"
+  root 'rakutens#index'
+  get "fetch_recipe", to: "rakutens#fetch_recipe"
 end

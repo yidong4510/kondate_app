@@ -78,3 +78,4 @@ end
 gem 'pry-rails'
 gem 'dotenv-rails'
 gem 'httpclient'
+gem 'net-http'
